@@ -15,7 +15,7 @@ const map = [
     "WWWWW W W W W W W W W",
     "W     W W W   W W W W",
     "W WWWWWWW WWWWW W W W",
-    "W       W       W   W",
+    "W               W   W",
     "WWWWWWWWWWWWWWWWWWWWW",
 ];
 
@@ -50,6 +50,10 @@ for (let j = 0; j < 15; j++) {
             criarCelula.className = ("W");
             criarCelula.id = ("W" + [j] + [i]);
             linha.appendChild(criarCelula);
+            const colocarImg = document.createElement('IMG');
+            colocarImg.src = "arvore.png";
+            colocarImg.id = "arvore";
+            criarCelula.appendChild(colocarImg);
 
         } else if (a === "S") {
             const linha = document.getElementById('linha' + [j]);
@@ -82,6 +86,10 @@ for (let j = 0; j < 15; j++) {
             criarCelula.className = ("C");
             criarCelula.id = ("C" + [j] + "C" + [i]);
             linha.appendChild(criarCelula);
+            // const colocarImg = document.createElement('IMG');
+            // colocarImg.src = "areiachao.png";
+            // colocarImg.id = "areia";
+            // criarCelula.appendChild(colocarImg);
         }
 
     }
@@ -171,8 +179,10 @@ const a = document.addEventListener('keydown', (event) => {
     }
     let m = jogador[0]
     let n = jogador[1]
+
     if (jogador[0] === 8 && jogador[1] === 20) {
-        alert("Você Conseguiu Sair do Labirinto!");
+        setTimeout(function() { alert("Você Conseguiu Sair do Labirinto!"); }, 500);
+
 
 
     }
