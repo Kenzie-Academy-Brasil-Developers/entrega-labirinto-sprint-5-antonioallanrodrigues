@@ -64,9 +64,11 @@ for (let j = 0; j < 15; j++) {
 
         } else if (a === "F") {
             const linha = document.getElementById('linha' + [j]);
+
+
             const criarCelula = document.createElement('div');
             criarCelula.className = ("F");
-            criarCelula.id = ("C" + [j] + [i]);
+            criarCelula.id = ("C" + [j] + "C" + [i]);
             linha.appendChild(criarCelula);
             // const vaiNoz = document.createElement("IMG");
             // vaiNoz.src = "noz.png";
@@ -78,7 +80,7 @@ for (let j = 0; j < 15; j++) {
             const linha = document.getElementById('linha' + [j]);
             const criarCelula = document.createElement('div');
             criarCelula.className = ("C");
-            criarCelula.id = ("C" + [j] + [i]);
+            criarCelula.id = ("C" + [j] + "C" + [i]);
             linha.appendChild(criarCelula);
         }
 
@@ -121,7 +123,7 @@ const a = document.addEventListener('keydown', (event) => {
         arrayJogador.push(pai);
 
         let d = r - 1;
-        const novoLugar = document.getElementById("C" + d + e);
+        const novoLugar = document.getElementById("C" + d + "C" + e);
         novoLugar.appendChild(arrayJogador[0]);
         jogador = [d, e];
         arrayJogador = [];
@@ -134,7 +136,7 @@ const a = document.addEventListener('keydown', (event) => {
         const pai = document.getElementById("castor");
         arrayJogador.push(pai);
         let d = r + 1;
-        const novoLugar = document.getElementById("C" + d + e);
+        const novoLugar = document.getElementById("C" + d + "C" + e);
         novoLugar.appendChild(arrayJogador[0]);
         jogador = [d, e];
         arrayJogador = [];
@@ -147,7 +149,7 @@ const a = document.addEventListener('keydown', (event) => {
         const pai = document.getElementById("castor");
         arrayJogador.push(pai);
         let d = e - 1;
-        const novoLugar = document.getElementById("C" + r + d);
+        const novoLugar = document.getElementById("C" + r + "C" + d);
         novoLugar.appendChild(arrayJogador[0]);
         jogador = [r, d];
         arrayJogador = [];
@@ -160,7 +162,7 @@ const a = document.addEventListener('keydown', (event) => {
         const pai = document.getElementById("castor");
         arrayJogador.push(pai);
         let d = e + 1;
-        const novoLugar = document.getElementById("C" + r + d);
+        const novoLugar = document.getElementById("C" + r + "C" + d);
         novoLugar.appendChild(arrayJogador[0]);
         jogador = [r, d];
         arrayJogador = [];
