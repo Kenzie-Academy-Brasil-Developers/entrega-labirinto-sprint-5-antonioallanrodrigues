@@ -174,6 +174,7 @@ const a = document.addEventListener('keydown', (event) => {
     if (jogador[0] === 8 && jogador[1] === 20) {
         alert("Você Conseguiu Sair do Labirinto!");
 
+
     }
 
 });
