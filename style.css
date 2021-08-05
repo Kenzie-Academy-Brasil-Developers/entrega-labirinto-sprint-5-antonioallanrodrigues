@@ -31,6 +31,7 @@ h1 {
 .W {
     width: 50px;
     height: 50px;
+    background-color: yellowgreen;
 }
 
 .C {
@@ -53,11 +54,13 @@ h1 {
 
 body {
     background-color: yellowgreen;
+    background-image: url("./fundo.png");
+    background-size: 120vmax 50vmax;
 }
 
 #castor {
-    max-width: 50px;
-    max-height: 50px;
+    width: 50px;
+    height: 45px;
     animation-duration: 100ms;
 }
 
